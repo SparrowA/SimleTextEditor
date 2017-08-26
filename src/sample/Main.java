@@ -6,10 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.Dialog;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import jdk.nashorn.internal.ir.IfNode;
 
 import java.io.*;
 import java.util.*;
@@ -100,7 +98,7 @@ public class Main extends Application {
 
     private static File getFile(String title, boolean save){
         FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("New file");
+        fileChooser.setTitle(title);
         fileChooser.getExtensionFilters().addAll(mExteFilter);
 
         return save ? fileChooser.showSaveDialog(mPrimaryStage) : fileChooser.showOpenDialog(mPrimaryStage);
